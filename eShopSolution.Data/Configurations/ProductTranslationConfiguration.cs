@@ -14,6 +14,7 @@ namespace eShopSolution.Data.Configurations
             builder.ToTable("ProductTranslations");
 
             builder.HasKey(x => x.Id);
+
             builder.Property(x => x.Id).UseIdentityColumn();
 
             builder.Property(x => x.Name).IsRequired().HasMaxLength(200);
@@ -21,7 +22,6 @@ namespace eShopSolution.Data.Configurations
             builder.Property(x => x.SeoAlias).IsRequired().HasMaxLength(200);
 
             builder.Property(x => x.Details).HasMaxLength(500);
-
 
             builder.Property(x => x.LanguageId).IsUnicode(false).IsRequired().HasMaxLength(5);
 
