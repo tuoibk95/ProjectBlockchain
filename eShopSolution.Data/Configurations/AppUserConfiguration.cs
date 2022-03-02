@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eshopSolution.Data.Configurations
+namespace eShopSolution.Data.Configurations
 {
     public class AppUserConfiguration : IEntityTypeConfiguration<AppUser>
 	{
