@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace eShopSolution.Data.Repositories
+namespace eShopSolution.Data.Configurations
 {
 	public class AppRoleConfiguration : IEntityTypeConfiguration<AppRole>
 	{
