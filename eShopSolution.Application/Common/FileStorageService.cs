@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Hosting;
 
 namespace eShopSolution.Application.Common
 {
-    internal class FileStorageService : IStorageService
+    public class FileStorageService : IStorageService
     {
         private readonly string _userContentFolder;
         private const string USER_CONTENT_FOLDER_NAME = "user-content";
