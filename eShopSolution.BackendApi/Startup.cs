@@ -1,4 +1,4 @@
-using eShopSolution.Application.Catalog.Products;
+﻿using eShopSolution.Application.Catalog.Products;
 using eShopSolution.Application.Common;
 using eShopSolution.Data.EF;
 using eShopSolution.Utilities.Constants;
@@ -45,7 +45,11 @@ namespace eShopSolution.BackendApi
             });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// <summary>
+        /// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        /// </summary>
+        /// <param name="app">Cấu hình request pipeline</param>
+        /// <param name="env">môi trường hoạt động của app</param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
