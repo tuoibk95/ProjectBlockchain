@@ -1,12 +1,11 @@
 ﻿using eShopSolution.Application.Catalog.Products;
 using eShopSolution.ViewModels.Catalog.Products;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace eShopSolution.BackendApi.Controllers
 {
-    [Route("api/[controller]")]
+	[Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
@@ -25,7 +24,7 @@ namespace eShopSolution.BackendApi.Controllers
             return Ok(products);
         }
 
-        [HttpGet("public_paging/{languageId}")]
+        [HttpGet("public_paging")]
         public async Task<IActionResult> Get([FromQuery]GetPublicProductPagingRequest request)
         {
             var products = await _publicProductService.GetAllByCategoryId(request);
