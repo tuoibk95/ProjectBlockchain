@@ -20,4 +20,8 @@
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\eShopSolution.Utilities\eShopSolution.Utilities.csproj" />
+  </ItemGroup>
+
 </Project>
