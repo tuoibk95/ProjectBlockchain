@@ -7,11 +7,11 @@ namespace eShopSolution.BackendApi.Controllers
 {
 	[Route("api/[controller]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public class ProductsController : ControllerBase
     {
         private readonly IPublicProductService _publicProductService;
         private readonly IManageProductService _manageProductService;
-        public ProductController(IPublicProductService publicProductService, IManageProductService manageProductService)
+        public ProductsController(IPublicProductService publicProductService, IManageProductService manageProductService)
         {
             _publicProductService = publicProductService;
             _manageProductService = manageProductService;
