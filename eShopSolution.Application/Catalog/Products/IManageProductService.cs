@@ -1,4 +1,5 @@
 ﻿using eShopSolution.ViewModels.Catalog.Products;
+using eShopSolution.ViewModels.Catalog.ProductImages;
 using eShopSolution.ViewModels.Common;
 using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace eShopSolution.Application.Catalog.Products
         Task<int> AddImages(int productId, List<IFormFile> file);
         Task<int> UpdateImages(int imageId, string caption, bool isDefault);
         Task<int> RemoveImages(int imageId);
-        Task<List<ProductImageViewModel>> GetListImage(int productId);
+        Task<List<ProductImageViewModel>> GetListImage(int imageId);
+        Task<ProductImageViewModel> GetImageById(int imageId);
     }
 }
