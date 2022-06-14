@@ -1,5 +1,6 @@
 ﻿using eShopSolution.Application.Catalog.Products;
 using eShopSolution.ViewModels.Catalog.Products;
+using eShopSolution.ViewModels.Catalog.ProductImages;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -65,10 +66,40 @@ namespace eShopSolution.BackendApi.Controllers
             return Ok();
         }
 
+        [HttpPut("{productId}/images/{imageId}")]
+        public async Task<IActionResult> UpdateImage(int imageId, [FromForm] ProductImageUpdateRequest request)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var affectedResult = await _manageProductService.UpdateImages(imageId, request);
+            if (affectedResult == 0)
+            {
+                return BadRequest();
+            }
+            return Ok();
+        }
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var affectedResult = await _manageProductService.Delete(id);
+            if (affectedResult == 0)
+            {
+                return BadRequest();
+            }
+            return Ok();
+        }
+
+        [HttpDelete("{productId}/images/{imageId}")]
+        public async Task<IActionResult> RemoveImage(int imageId)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var affectedResult = await _manageProductService.RemoveImages(imageId);
             if (affectedResult == 0)
             {
                 return BadRequest();

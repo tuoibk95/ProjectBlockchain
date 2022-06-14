@@ -17,8 +17,8 @@ namespace eShopSolution.Application.Catalog.Products
         Task<bool> UpdateStock(int productId, int addedQuantity);
         Task AddViewcount(int productId);
         Task<PagedResult<ProductViewModel>> GetAllPaging(GetManageProductPagingRequest request);
-        Task<int> AddImages(int productId, List<IFormFile> file);
-        Task<int> UpdateImages(int imageId, string caption, bool isDefault);
+        Task<int> AddImage(int productId, ProductImageCreateRequest request);
+        Task<int> UpdateImages(int imageId, ProductImageUpdateRequest request);
         Task<int> RemoveImages(int imageId);
         Task<List<ProductImageViewModel>> GetListImage(int imageId);
         Task<ProductImageViewModel> GetImageById(int imageId);
