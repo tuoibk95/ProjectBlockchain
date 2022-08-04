@@ -1,4 +1,4 @@
-# ASP.NET Core 3.1 project from TEDU
+# ASP.NET Core 3.1 project
 ## Technologies
 - ASP.NET CORE 3.1
 - Entiry Framework Core 3.1 
