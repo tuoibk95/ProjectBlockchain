@@ -210,7 +210,7 @@ namespace eShopSolution.Application.Catalog.Products
             return productImage;
         }
 
-        public async Task<List<ProductImageViewModel>> GetListImage(int productId)
+        public async Task<List<ProductImageViewModel>> GetListImages(int productId)
         {
             return await _context.ProductImages.Where(x => x.ProductId == productId)
                 .Select(i => new ProductImageViewModel()
@@ -246,12 +246,12 @@ namespace eShopSolution.Application.Catalog.Products
             return productImage.Id;
         }
 
-        public async Task<int> UpdateImages(int imageId, ProductImageUpdateRequest request)
+        public async Task<int> UpdateImage(int imageId, ProductImageUpdateRequest request)
         {
             var productImage = await _context.ProductImages.FindAsync(imageId);
             if (productImage == null)
             {
-                throw new EShopException($"Cannot find a ProductImages {imageId}");
+                throw new EShopException($"Cannot find a ProductImages with id {imageId}");
             }
             if (request.ImageFile != null)
             {
@@ -262,7 +262,7 @@ namespace eShopSolution.Application.Catalog.Products
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<int> RemoveImages(int imageId)
+        public async Task<int> RemoveImage(int imageId)
         {
             var image = await _context.Products.FindAsync(imageId);
             if (image == null)

@@ -18,9 +18,9 @@ namespace eShopSolution.Application.Catalog.Products
         Task AddViewcount(int productId);
         Task<PagedResult<ProductViewModel>> GetAllPaging(GetManageProductPagingRequest request);
         Task<int> AddImage(int productId, ProductImageCreateRequest request);
-        Task<int> UpdateImages(int imageId, ProductImageUpdateRequest request);
-        Task<int> RemoveImages(int imageId);
-        Task<List<ProductImageViewModel>> GetListImage(int imageId);
+        Task<int> UpdateImage(int imageId, ProductImageUpdateRequest request);
+        Task<int> RemoveImage(int imageId);
+        Task<List<ProductImageViewModel>> GetListImages(int productId);
         Task<ProductImageViewModel> GetImageById(int imageId);
     }
 }
