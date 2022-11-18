@@ -85,8 +85,8 @@ namespace eShopSolution.Application.Catalog.Products
             // 4. Select Projection
             var pageResult = new PagedResult<ProductViewModel>()
             {
-                TotalRecord = totalRow,
                 Items = data,
+                TotalRecord = totalRow
             };
 
             return pageResult;
