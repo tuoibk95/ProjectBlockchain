@@ -12,10 +12,7 @@ namespace eShopSolution.Data.EF
 {
     public class EShopDBContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
-        public EShopDBContext(DbContextOptions options) : base(options)
-        {
-            
-        }
+        public EShopDBContext(DbContextOptions options) : base(options) {}
 
         // Configure using Fluent API
         protected override void OnModelCreating(ModelBuilder modelBuilder)
