@@ -45,9 +45,7 @@ namespace eShopSolution.AdminApp.Controllers
 				ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
 				IsPersistent = true
 			};
-			await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-					userPrinciple,
-					authProperties);
+			await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, userPrinciple, authProperties);
 
 			return RedirectToAction("Index","Home");
 		}
@@ -65,9 +63,8 @@ namespace eShopSolution.AdminApp.Controllers
 			SecurityToken validatedToken;
 			TokenValidationParameters validationParameters = new TokenValidationParameters();
 			validationParameters.ValidateLifetime = true;
-
-			validationParameters.ValidAudience = _configuration["Tokens:Issuer"];
 			validationParameters.ValidIssuer = _configuration["Tokens:Issuer"];
+			validationParameters.ValidAudience = _configuration["Tokens:Audience"];
 			validationParameters.IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Tokens:Key"]));
 
 			ClaimsPrincipal principal = new JwtSecurityTokenHandler().ValidateToken(jwtToken, validationParameters, out validatedToken);
