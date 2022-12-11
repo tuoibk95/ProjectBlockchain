@@ -81,7 +81,7 @@ namespace ApiEmployee.Controllers
             return new JsonResult("Update thành công");
         }
 
-        [HttpDelete("id")]
+        [HttpDelete("{id}")]
         public JsonResult Delete(int id)
         {
             string query = @"Delete from COMPANY " + "where id = " + id;

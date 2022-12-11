@@ -3,6 +3,7 @@ using eShopSolution.ViewModels.Catalog.Products;
 using eShopSolution.ViewModels.Catalog.ProductImages;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using System.Net;
 
 namespace eShopSolution.BackendApi.Controllers
 {
