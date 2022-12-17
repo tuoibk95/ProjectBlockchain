@@ -16,6 +16,6 @@ namespace BooksApi.Models
 
         public string Category { get; set; } = null!;
 
-        public string Author { get; set; } = null!;
+        public Author Authors { get; set; } = null!;
     }
 }

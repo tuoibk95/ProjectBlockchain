@@ -13,7 +13,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI.Service", "WebAPI.Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPI.Model", "WebAPI.Model\WebAPI.Model.csproj", "{54D709F8-CBCF-49C0-B47F-B904976324D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksApi", "BooksApi\BooksApi.csproj", "{29CCA4E8-46B7-49B0-9ED1-3C0A63A69BA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksApi", "BooksApi\BooksApi.csproj", "{29CCA4E8-46B7-49B0-9ED1-3C0A63A69BA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Config", "Config", "{73FAA870-8222-4AFC-A03D-734FACAA2D8D}"
+	ProjectSection(SolutionItems) = preProject
+		user.json = user.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

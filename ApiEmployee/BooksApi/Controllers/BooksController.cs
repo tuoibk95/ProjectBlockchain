@@ -40,7 +40,7 @@ namespace BooksApi.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post(Book newBook)
+        public async Task<IActionResult> Post([FromForm] Book newBook)
         {
             await _booksService.CreateAsync(newBook);
 
